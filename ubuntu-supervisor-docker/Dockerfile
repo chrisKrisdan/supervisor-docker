@@ -2,8 +2,8 @@ FROM ubuntu:16.04
 
 MAINTAINER chris.krisdan@google.com
 
-RUN apt-get update && apt-get install -y openssh-server supervisor
-RUN mkdir -p /var/run/sshd /var/log/supervisor
+RUN apt-get update && apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
